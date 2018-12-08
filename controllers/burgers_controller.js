@@ -17,14 +17,14 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/api/burger_name", function(req, res) {
+router.post("/api/burger", function(req, res) {
   burger.insert(["burger_name"],  function(data) {
     // Send back the ID of the new quote
     res.redirect("/");
   });
 });
 
-router.put("/api/burgers/:id", function(req, res) {
+router.put("/api/burger/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   burger.update(
@@ -35,11 +35,11 @@ router.put("/api/burgers/:id", function(req, res) {
     function(data) {
     releaseEvents.redirect('/');
     
-        //   if (result.changedRows === 0) {
-    //     // If no rows were changed, then the ID must not exist, so 404
-    //     return res.status(404).end();
-    //   }
-    //   res.status(200).end();
+          if (result.changedRows === 0) {
+        // If no rows were changed, then the ID must not exist, so 404
+        return res.status(404).end();
+      }
+      res.status(200).end();
 
     }
   );

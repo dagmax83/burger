@@ -1,8 +1,14 @@
 
-{{!-- <li>
+<li>
 	{{name}}
 
-	<button class="change-burger" data-id="{{id}}" data-newburger="{{burger}}">
-		{{#if burger}}I WANT!{{else}}DEVOUR!{{/if}}
+	<button class="change-burger" data-id="{{id}}" data-newburger=
+	"{{burger}}">
+		{{#if burger}}I WANT!{{else}}EAT!{{/if}}
 	</button>
-</li> --}}
+	
+	<button class="change-burger" data-id="{{id}}" data-devoured=
+	"{{burger}}">
+		{{#if burger}}ATE!{{else}}DEVOURED!{{/if}}
+	</button>
+</li>
