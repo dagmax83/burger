@@ -2,13 +2,9 @@
 <li>
 	{{name}}
 
-	<button class="change-burger" data-id="{{id}}" data-newburger=
-	"{{burger}}">
-		{{#if burger}}I WANT!{{else}}EAT!{{/if}}
+	<button class="change-burger" data-id="{{id}}" data-newburger="{{burger}}">
+		{{#if burger}}devoured!{{else}}I WANT to EAT!{{/if}}
 	</button>
-	
-	<button class="change-burger" data-id="{{id}}" data-devoured=
-	"{{burger}}">
-		{{#if burger}}ATE!{{else}}DEVOURED!{{/if}}
-	</button>
+
+	<button class="delete-burger" data-id="{{this.id}}">Devoured!</button>
 </li>
